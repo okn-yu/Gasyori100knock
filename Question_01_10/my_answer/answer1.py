@@ -23,4 +23,5 @@ cv2.imshow('image', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-## 一言メモ
+# 一言メモ
+# 各ピクセルの（x, y）座標に対して、RGBではなくてBGR毎に値を持っている
