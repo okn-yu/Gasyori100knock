@@ -11,6 +11,9 @@ r = img[:, :, 2].copy()
 Y = 0.2126 * r + 0.7152 * g + 0.0722 * b
 Y = Y.astype(np.uint8)
 
+max_th = 0
+max_Sb_2 = 0
+
 for th in range(0, 255):
     s0 = (Y < th)
     s1 = (Y >= th)
@@ -23,7 +26,15 @@ for th in range(0, 255):
     M1 = np.mean(S1_list) if len(S1_list) > 0 else 0
 
     Sb_2 = w0 * w1 * ((M0 - M1) * (M0 - M1))
-    print(th, Sb_2)
+
+    if max_Sb_2 < Sb_2:
+        max_th = th
+        max_Sb_2 = Sb_2
+
+print(max_th)
+
+Y[Y < max_th] = 0
+Y[Y >= max_th] = 255
 
 cv2.imshow('image', Y)
 cv2.waitKey(0)
