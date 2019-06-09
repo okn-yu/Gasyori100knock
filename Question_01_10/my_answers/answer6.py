@@ -23,4 +23,7 @@ cv2.imshow('image', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+# 一言
+# //演算子は切り捨て除算
+
 
