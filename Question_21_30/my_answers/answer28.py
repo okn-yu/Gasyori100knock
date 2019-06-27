@@ -19,7 +19,7 @@ x_before = np.tile(x_before, (H, 1)).astype(np.uint8) # (128, 128)
 # print(x_before)
 
 y_after = y_before - 30
-x_after = x_before - 30
+x_after = x_before + 30
 
 # y_after = np.tile(y_after, (W, 1)).astype(np.uint8) # (128, 128)
 # x_after = np.tile(x_after, (H, 1)).astype(np.uint8) # (128, 128)
