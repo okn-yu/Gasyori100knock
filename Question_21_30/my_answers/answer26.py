@@ -63,9 +63,9 @@ out[out > 255] = 255
 out = out.astype(np.uint8)
 
 # Save result
-# cv2.imshow("result", out)
-# cv2.waitKey(0)
-# cv2.imwrite("out.jpg", out)
+cv2.imshow("result", out)
+cv2.waitKey(0)
+cv2.imwrite("out.jpg", out)
 
 # 一言
 # READMEの説明を見ても何を言っているのかわからなかった
